@@ -1,0 +1,58 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{soul}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+
+\newlength{\drop}
+
+\usepackage{tikz}
+
+\newcommand{\inline}[2]{%
+    \begin{tikzpicture}[baseline=(word.base), txt/.style={shape=rectangle, inner sep=0pt}]% the baseline key ensures that nodes won't shift up if there's text with descenders, and the txt style removes extra spacing so you can use this inline
+    \node[txt] (word) {#1};% the first argument is the contents of the main node
+    \node[above] at (word.north) {\footnotesize{#2}};% the second argument is the tag; you can play with the positioning as necessary
+    \end{tikzpicture}%
+    }
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\drop=0.1\textheight
+    \centering
+    \vspace*{\baselineskip}
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}\\[\baselineskip]
+    {\LARGE PORTUGUESE\\[0.2\baselineskip] NOTES}\\[0.2\baselineskip]
+    \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+    \rule{\textwidth}{1.6pt}\\[\baselineskip]
+    \scshape
+
+    \vspace*{2\baselineskip}
+    Edited by \\[\baselineskip]
+    {\Large MAXIMILIANO PONCE\par}
+    {\itshape My Portuguese journey \\\par}
+    \vfill
+    {\scshape 2020} \\
+    {\large MAXIMILIANO PONCE}\par
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\indent
+Olá! Eu sou Maximiliano e sou estudante de engenharia, eu moro no norte do Mexico e gosto muito da língua portugesa.
+Minha língua materna é espanhol e minha segunda língua é inglês. Atualmente, estoi melhorando meu inglês e estudando português.
+Eu espero que este document possa servir pra outras pessoas que querem aprender a língua portuguesa
+\newpage
+
+\end{document}
